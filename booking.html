@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <title>Flight Booking Page</title>
+    </head>
+    <body  background="images/img3.webp">
+        <h1 style="color:rgb(25, 215, 232)">BOOKING PAGE</h1>
+        <h2 style="color:white">Search for flights</h2>
+        <table cell padding="10" border="3" align="center">
+            <tr>
+                <th>SL no</th>
+                <th>Name of the FLight</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Date</th>
+                <th>Arrival time</th>
+                <th>Booking</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Air India</td>
+                <td>India</td>
+                <td>Qatar</td>
+                <td>20/10/2022</td>
+                <td>20:25</td>
+                <th><a href="bookNow.html">Book Now</a></th>
+            </tr> 
+            <tr>
+                <td>2.</td>
+                <td>Indigo</td>
+                <td>Oman</td>
+                <td>India</td>
+                <td>21/10/2022</td>
+                <td>5:30</td>
+                <th><a href="bookNow.html">Book Now</a></th>
+            </tr> 
+            <tr>
+                <td>3.</td>
+                <td>Emirates</td>
+                <td>Dubai</td>
+                <td>Singapore</td>
+                <td>21/10/2022</td>
+                <td>10:45</td>
+                <th><a href="bookNow.html">Book Now</a></th>
+            </tr> 
+        </table>
+
+
+        <br>
+        <br>
+        <br>
+
+
+    <h5 style="color:grey">PLEASE FILL OUT YOUR DETAILS HERE</h5>
+    
+        <!-- form -->
+        <form action="print.html" method="POST">
+            <table cellspacing="6" cellpadding="2">
+                <tr>
+                    <td>
+                        <label for="first name">First Name:</label>
+                    </td>
+                    <td>
+                        <input  type="text" id="firstName" name="firstName"  placeholder="Your First Name"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="last name">Last Name:</label>
+                    </td>
+                    <td>
+                        <input  type="text" id="lastName" name="lastName"  placeholder="Your last Name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="Address">Address:</label>
+                    </td>
+                    <td>
+                        <textarea id="address" name="address"  placeholder="Address" row="6" cols="20"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="dob">Date of Birth:</label>
+                    </td>
+                    <td>
+                        <input  type="date" id="dob" name="dob"  placeholder="Your date of birth"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="gender">Gender:</label>
+                    </td>
+                    <td>
+                        <input  type="radio" id="male" name="gender"   value="1"/>Male
+                        <input  type="radio" id="female" name="gender"  value="2"/>Female
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <label for="mobile">Mobile:</label>
+                    </td>
+                    <td>
+                        <input  type="text" id="mobile" name="mobile"  placeholder="Your phone number"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                    </td>
+                    <td>
+                        <input  type="email" id="email" name="email"  placeholder="Your Email id"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="userName">Username:</label>
+                    </td>
+                    <td>
+                        <input  type="text" id="userName" name="userName"  placeholder="Your Username"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="password">Password:</label>
+                    </td>
+                    <td>
+                        <input  type="password" id="password" name="password"  placeholder="Your password."/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="contactYou">Can we contact you?:</label>
+                    </td>
+                    <td>
+                        <input  type="radio" id="yes" name="contactYou"   value="1"/>yes
+                        <input  type="radio" id="no" name="contactYou"  value="2"/>No
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="communication">Communication Preference:</label>
+                    </td>
+                    <td>
+                        <input  type="radio" id="email" name="communication"   value="1"/>Email
+                        <input  type="radio" id="sms" name="communication"  value="2"/>SMS
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input  type="checkbox" id="agree" name="agree"   value="1" aria-colspan="2"/>I agree to the <a href="">terms and agreements</a> of the website.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center" colspan="2">
+                        <input type="submit" onClick="javascript:saveData();"  id="submit" name="submit" value="Submit" style="background-color:blue; color:white"; />
+                        <input type="reset" id="reset" value="Reset" style="background-color:blue; color:white";/>
+                    </td>
+                </tr>
+
+
+
+
+                
+            </table>
+            <!-- <button style="background-color:blue; color:white;">Submit</button>
+            <button style="background-color:blue; color:white;">Reset</button> -->
+        </form>
+
+<!--Booking from end-->
+<script>
+    function saveData(){
+        //alert("hi");
+        var firstName=document.getElementById('firstName').value;
+        var lastName=document.getElementById('lastName').value;
+        var address=document.getElementById('address').value;
+
+        localStorage.setItem("firstName",firstName);
+        localStorage.setItem("lastName",lastName);
+        localStorage.setItem("address",address);
+
+    }
+</script>
+            
+        
+        <a href="index.html" style="color:rgb(233, 159, 201)" > BACK TO LOGIN PAGE</a>
+    </body>
+</html>
