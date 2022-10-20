@@ -1,11 +1,40 @@
 <html>
     <head>
         <title>Flight Booking Page</title>
+        <!-- <link href="./css/styles.css" type="text/css" rel="stylesheet"/> -->
+        <link href="./css/main.css" type="text/css" rel="stylesheet"/>
+        <!-- <style type="text/css">
+            label{                  
+                font-weight: bold; 
+                color: purple;
+            }
+            .tab1{
+                border: 5px solid red;
+                background-color: greenyellow;
+            }
+            #lastName{
+                color: blueviolet;
+            }
+            body > p{
+                font-style: italic;
+            }
+        </style> -->
     </head>
     <body  background="images/img3.webp">
         <h1 style="color:rgb(25, 215, 232)">BOOKING PAGE</h1>
         <h2 style="color:white">Search for flights</h2>
-        <table cell padding="10" border="3" align="center">
+        <video width=""320" height="240" controls autoplay muted>
+            <source src="videos/sample.mp4" type=""video/mp4">
+        </video>
+
+        <audio controls autoplay>
+            <source src="audios/samaudio.mp3" type="audio/mpeg">
+            <source src="" type="audio/ogg">
+        </audio>
+
+        <br>
+        <br>
+        <table  class="parent" cell padding="10" border="3" align="center">
             <tr>
                 <th>SL no</th>
                 <th>Name of the FLight</th>
@@ -55,6 +84,19 @@
         <!-- form -->
         <form action="print.html" method="POST">
             <table cellspacing="6" cellpadding="2">
+                <tr>
+                    <td>
+                        <label for="title">Title</label>
+                    </td>
+                    <td>
+                        <select name="title" id="title" multiple>
+                            <option value="1" >Mr.</option>
+                            <option value="2" >Mrs.</option>
+                            <option value="3" >Ms</option>
+                         </select>
+                    </td>
+                </tr>
+               
                 <tr>
                     <td>
                         <label for="first name">First Name:</label>
@@ -160,6 +202,15 @@
                 <tr>
                     <td>
                         <input  type="checkbox" id="agree" name="agree"   value="1" aria-colspan="2"/>I agree to the <a href="">terms and agreements</a> of the website.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="photo">Photo</label>
+                    </td>
+                    <td>
+                        <input type="file" id="photofile" name="photofile" accept="image/*,*.pdf"/>
                     </td>
                 </tr>
 
